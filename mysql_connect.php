@@ -1,5 +1,5 @@
 <?php
-if(getenv('GLOBAL') == 'true') {
+if(getenv('GLOBAL') != 'true') {
   require_once "vendor/autoload.php";
   $dotenv = Dotenv\Dotenv::create(__DIR__);
   $dotenv->load();
