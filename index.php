@@ -8,12 +8,6 @@
   <title>Flower-Shop</title>
 </head>
 <body>
-<form action="registration.php" method="post">
-  <label for="login">Логин</label><br>
-  <input type="text" name="login"><br>
-  <label for="password">Пароль</label><br>
-  <input type="password" name="password"><br><br>
-  <button type="submit">Регистрация</button>
-</form>
+
 </body>
 </html>
