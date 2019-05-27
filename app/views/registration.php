@@ -8,7 +8,7 @@
   <title>Document</title>
 </head>
 <body>
-<form action="reg.php" method="post">
+<form action="../reg.php" method="post">
   <label for="login">Логин<br>
     <input type="text" name="login">
   </label><br>
