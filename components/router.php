@@ -4,7 +4,7 @@ require "../vendor/autoload.php";
 $url = $_SERVER['REQUEST_URI'];
 
 if ($url == "/") {
-  require "../app/views/index.php"; exit;
+  require "../app/views/site/index.php"; exit;
 } elseif ($url == '/reg') {
-  require "../app/views/registration.php"; exit;
+  require "../app/views/site/registration.php"; exit;
 }
