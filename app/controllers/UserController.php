@@ -13,9 +13,7 @@ class UserController
   public function registration()
   {
     if (isset($_POST['submit'])) {
-      $login = $_POST['login'];
-      $password = $_POST['password'];
-      User::registration($login, $password);
+      User::registration($_POST['login'], $_POST['password']);
     }
     require 'app/views/site/registration.php';
   }
