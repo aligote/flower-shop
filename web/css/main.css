@@ -1,6 +1,18 @@
 .header {
-  height: 100px;
-  background: green;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1024px;
 }
 
 .nav__list {
@@ -10,11 +22,36 @@
   list-style: none;
 }
 
-.nav__item {
-  margin-left: 10px;
-}
-
 .nav__link {
   text-decoration: none;
-  color: black;
+  color: #494748;
+  padding: 14px;
+}
+
+.nav__link:hover {
+  color: #69AF56;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #68AE55;
+}
+
+.auth__list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.auth__link {
+  text-decoration: none;
+  color: #494748;
+  padding: 7px 10px 7px 40px;
+  border-radius: 5px;
+  margin-left: 15px;
+  border: 1px solid black;
+}
+
+.auth__link:hover {
+  background: #FF9900;
+  color: white;
 }
