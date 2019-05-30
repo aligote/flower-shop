@@ -3,14 +3,13 @@
   margin: 0;
 }
 .header {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #CCCCCC;
+
 }
 
 .header__wrapper {
+  height: 50px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -77,6 +76,9 @@
   border-radius: 10px;
   text-align: center;
   background: #68AE55;
+  position: fixed;
+  top: 20%;
+  left: 38%;
 }
 
 .registration-form__title {
@@ -88,7 +90,7 @@
 .registration-form__password,
 .registration-form__name,
 .registration-form__phone {
-  padding: 10px;
+  padding: 10px 15px 10px 15px;
   margin-bottom: 10px;
 }
 

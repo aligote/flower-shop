@@ -41,5 +41,5 @@
         </ul>
       </div>
     </div>
+    <?php require_once __DIR__ . '/../../views/user/registration.php'; ?>
   </header>
-<?php require_once __DIR__ . '/../user/registration.php'; ?>

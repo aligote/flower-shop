@@ -15,6 +15,6 @@ class UserController
     if (isset($_POST['submit'])) {
       User::registration($_POST['email'], $_POST['password'], $_POST['name'], $_POST['phone']);
     }
-    require 'app/views/user/registration.php';
+    require 'app/views/site/index.php';
   }
 }
