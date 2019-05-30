@@ -1,3 +1,7 @@
+*{
+  padding: 0;
+  margin: 0;
+}
 .header {
   height: 50px;
   display: flex;
@@ -54,4 +58,43 @@
 .auth__link:hover {
   background: #FF9900;
   color: white;
+}
+
+.registration {
+  display: flex;
+  justify-content: center;
+}
+
+#registration-form {
+  display: none;
+}
+
+.registration-form {
+  margin: 0 auto;
+  padding: 15px;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background: #68AE55;
+}
+
+.registration-form__title {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.registration-form__email,
+.registration-form__password,
+.registration-form__name,
+.registration-form__phone {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.registration-form__button {
+  margin-top: 10px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
 }

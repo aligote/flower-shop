@@ -18,19 +18,16 @@
               <a href="/" class="nav__link">Главная</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Главная</a>
+              <a href="#" class="nav__link">Новости</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Главная</a>
+              <a href="#" class="nav__link">Отзывы</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Главная</a>
+              <a href="#" class="nav__link">Контакты</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Главная</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Главная</a>
+              <a href="#" class="nav__link">О нас</a>
             </li>
           </ul>
         </nav>
@@ -39,9 +36,10 @@
             <a href="#" class="auth__link auth__link_login">Вход</a>
           </li>
           <li class="auth__item">
-            <a href="/registration" class="auth__link auth__link_registration">Регистрация</a>
+            <a href="#" onclick="showForm(); return false;" class="auth__link auth__link_registration">Регистрация</a>
           </li>
         </ul>
       </div>
     </div>
   </header>
+<?php require_once __DIR__ . '/../user/registration.php'; ?>
