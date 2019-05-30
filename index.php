@@ -1,7 +1,7 @@
 <?php
 require "vendor/autoload.php";
-require "app/models/User.php";
 require 'ConnectDb.php';
+require "app/models/User.php";
 
 
 session_start();
