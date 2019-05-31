@@ -33,12 +33,25 @@
         </nav>
         <div class="auth">
           <ul class="auth__list">
+            <?php
+            if($_COOKIE['login'] == ''):
+              ?>
             <li class="auth__item">
               <a href="#" onclick="showForm('authorization-form'); return false;" class="auth__link auth__link_authorization">Вход</a>
             </li>
             <li class="auth__item">
               <a href="#" onclick="showForm('registration-form'); return false;" class="auth__link auth__link_registration">Регистрация</a>
             </li>
+            <?php
+            else:
+              ?>
+            <li class="auth__item">
+              <h2><?=$_COOKIE['login']?></h2>
+              <a href="#" class="auth__link auth__link_exit">Выход</a>
+            </li>
+            <?php
+            endif;
+            ?>
           </ul>
         </div>
       </div>
