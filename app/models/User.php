@@ -10,4 +10,13 @@ class User {
     $statement->bindParam(':phone', $phone);
     return $statement->execute();
   }
+
+  public static function authorization($email, $password) {
+    $db = ConnectDb::getConnection();
+    $sql = "INSERT INTO users(email, password) VALUES (:email, :password)";
+    $statement = $db->prepare($sql);
+    $statement->bindParam(':email', $email);
+    $statement->bindParam(':password', $password);
+    return $statement->execute();
+  }
 }

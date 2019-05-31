@@ -17,4 +17,11 @@ class UserController
     }
     require 'app/views/site/index.php';
   }
+
+  public function authorization() {
+    if (isset($_POST['submit'])) {
+      User::authorization($_POST['email'], $_POST['password']);
+    }
+    require 'app/views/site/index.php';
+  }
 }
