@@ -2,7 +2,7 @@
   <div class="container">
     <form class="registration-form"  id="registration-form" action="/registration" method="post">
       <h2 class="registration-form__title">Регистрация</h2>
-      <a class="registration-form__link" href="#" onclick="closeForm(); return false;">
+      <a class="registration-form__link" href="#" onclick="closeForm('registration-form'); return false;">
         <img class="registration-form__icon" src="/web/icons/close.png" alt="">
       </a>
       <input class="registration-form__email" type="text" name="email" placeholder="Введите ваш E-mail">

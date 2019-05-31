@@ -34,10 +34,10 @@
         <div class="auth">
           <ul class="auth__list">
             <li class="auth__item">
-              <a href="#" class="auth__link auth__link_login">Вход</a>
+              <a href="#" onclick="showForm('authorization-form'); return false;" class="auth__link auth__link_authorization">Вход</a>
             </li>
             <li class="auth__item">
-              <a href="#" onclick="showForm(); return false;" class="auth__link auth__link_registration">Регистрация</a>
+              <a href="#" onclick="showForm('registration-form'); return false;" class="auth__link auth__link_registration">Регистрация</a>
             </li>
           </ul>
         </div>
@@ -61,4 +61,5 @@
       </div>
     </div>
     <?php require_once __DIR__ . '/../../views/user/registration.php'; ?>
+    <?php require_once __DIR__ . '/../../views/user/authorization.php'; ?>
   </header>

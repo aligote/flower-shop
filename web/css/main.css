@@ -119,6 +119,65 @@
   border-radius: 5px;
 }
 
+.authorization {
+  display: flex;
+  justify-content: center;
+}
+
+#authorization-form {
+  display: none;
+}
+
+.authorization-form {
+  margin: 0 auto;
+  padding: 15px;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  text-align: center;
+  background: dimgray;
+  position: fixed;
+  top: 20%;
+  left: 38%;
+}
+
+.authorization-form__title {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.authorization-form__icon {
+  width: 35px;
+  height: 35px;
+  top: 7px;
+  right: 7px;
+  position: absolute;
+}
+
+.authorization-form__email,
+.authorization-form__password,
+.authorization-form__name,
+.authorization-form__phone {
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.authorization-form__button {
+  margin-top: 10px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  background: #68AE55;
+  text-decoration: none;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
 .header__middle {
   display: flex;
   justify-content: space-between;

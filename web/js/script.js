@@ -1,12 +1,12 @@
-function showForm() {
-  const display = document.getElementById('registration-form').style.display;
+function showForm(id) {
+  let display = document.getElementById(id).style.display;
   if (display === "block") {
-    document.getElementById('registration-form').style.display = "none";
+    document.getElementById(id).style.display = "none";
   } else {
-    document.getElementById('registration-form').style.display = "block";
+    document.getElementById(id).style.display = "block";
   }
 }
 
-function closeForm() {
-  document.getElementById('registration-form').style.display = "none";
+function closeForm(id) {
+  document.getElementById(id).style.display = "none";
 }
