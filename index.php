@@ -12,6 +12,8 @@ if ($url == "/") {
   $controller = ["app\controllers\UserController", "registration"];
 } elseif ($url == '/authorization') {
   $controller = ["app\controllers\UserController", "authorization"];
+} elseif ($url == "/output") {
+  $controller = ["app\controllers\UserController", "output"];
 }
 
 if(empty($controller)) {

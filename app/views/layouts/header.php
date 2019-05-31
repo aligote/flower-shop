@@ -34,7 +34,7 @@
         <div class="auth">
           <ul class="auth__list">
             <?php
-            if($_COOKIE['login'] == ''):
+            if($_COOKIE['email'] == ''):
               ?>
             <li class="auth__item">
               <a href="#" onclick="showForm('authorization-form'); return false;" class="auth__link auth__link_authorization">Вход</a>
@@ -46,8 +46,7 @@
             else:
               ?>
             <li class="auth__item">
-              <h2><?=$_COOKIE['login']?></h2>
-              <a href="#" class="auth__link auth__link_exit">Выход</a>
+              <a href="/output" class="auth__link auth__link_exit">Выход</a>
             </li>
             <?php
             endif;

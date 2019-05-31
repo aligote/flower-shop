@@ -8,23 +8,28 @@ class User {
     $statement->bindParam(':password', $password);
     $statement->bindParam(':name', $name);
     $statement->bindParam(':phone', $phone);
-    return $statement->execute();
+    $statement->execute();
+    header('Location: /');
   }
 
   public static function authorization($email, $password) {
     $db = ConnectDb::getConnection();
-    $mail = trim(filter_var($_POST['email'], FILTER_SANITIZE_STRING));
-    $pass = trim(filter_var($_POST['password'], FILTER_SANITIZE_STRING));
-    $sql = "SELECT id FROM users WHERE email == :email && password == :password";
+    $sql = "SELECT id FROM users WHERE email=:email AND password=:password";
     $statement = $db->prepare($sql);
     $statement->bindParam(':email', $email);
     $statement->bindParam(':password', $password);
-    $statement->execute(['email' => $mail, 'password' => $pass]);
+    $statement->execute();
     $user = $statement->fetch(PDO::FETCH_OBJ);
     if ($user->id == 0) {
       echo 'Такого пользователя нет';
     } else {
       setcookie('email', $email, time() + 3600 * 24 * 30, "/");
+      header('Location: /');
     }
+  }
+  public static function output() {
+    setcookie('email', "", time() - 3600 * 24 * 30, "/");
+    unset($_COOKIE['email']);
+    header('Location: /');
   }
 }

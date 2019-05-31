@@ -24,4 +24,9 @@ class UserController
     }
     require 'app/views/site/index.php';
   }
+
+  public function output() {
+    User::output();
+    require 'app/views/site/index.php';
+  }
 }
