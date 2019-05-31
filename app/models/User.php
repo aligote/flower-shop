@@ -21,7 +21,7 @@ class User {
     $statement->execute();
     $user = $statement->fetch(PDO::FETCH_OBJ);
     if ($user->id == 0) {
-      echo 'Такого пользователя нет';
+      header('Location: /');
     } else {
       setcookie('email', $email, time() + 3600 * 24 * 30, "/");
       header('Location: /');
