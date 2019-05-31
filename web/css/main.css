@@ -6,11 +6,12 @@
 
 }
 
-.header__wrapper {
+.header__top {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 25px;
 }
 
 .container {
@@ -46,12 +47,12 @@
 }
 
 .auth__link {
+  background: #68AE55;
   text-decoration: none;
-  color: #494748;
-  padding: 7px 10px 7px 40px;
+  color: white;
+  padding: 10px 10px 10px 40px;
   border-radius: 5px;
   margin-left: 15px;
-  border: 1px solid black;
 }
 
 .auth__link:hover {
@@ -75,7 +76,7 @@
   height: 300px;
   border-radius: 10px;
   text-align: center;
-  background: #68AE55;
+  background: dimgray;
   position: fixed;
   top: 20%;
   left: 38%;
@@ -86,12 +87,23 @@
   margin-bottom: 15px;
 }
 
+.registration-form__icon {
+  width: 35px;
+  height: 35px;
+  top: 7px;
+  right: 7px;
+  position: absolute;
+}
+
 .registration-form__email,
 .registration-form__password,
 .registration-form__name,
 .registration-form__phone {
+  border-radius: 5px;
+  border: none;
   padding: 10px 15px 10px 15px;
   margin-bottom: 10px;
+  outline: none;
 }
 
 .registration-form__button {
@@ -99,4 +111,53 @@
   width: 150px;
   height: 40px;
   cursor: pointer;
+  outline: none;
+  background: #68AE55;
+  text-decoration: none;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.header__middle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo__image {
+  width: 100px;
+  height: 100px;
+}
+
+.search-form {
+  margin-top: 30px;
+}
+
+.search-form__content {
+  padding: 10px 15px 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+.search-form__button {
+  color: white;
+  border: none;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: #68AE55;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-form__button:hover {
+  background: #FF9900;
+  color: white;
+}
+
+.basket__image {
+  width: 70px;
+  height: 70px;
 }

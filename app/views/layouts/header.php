@@ -11,7 +11,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header__wrapper">
+      <div class="header__top">
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -31,14 +31,33 @@
             </li>
           </ul>
         </nav>
-        <ul class="auth__list">
-          <li class="auth__item">
-            <a href="#" class="auth__link auth__link_login">Вход</a>
-          </li>
-          <li class="auth__item">
-            <a href="#" onclick="showForm(); return false;" class="auth__link auth__link_registration">Регистрация</a>
-          </li>
-        </ul>
+        <div class="auth">
+          <ul class="auth__list">
+            <li class="auth__item">
+              <a href="#" class="auth__link auth__link_login">Вход</a>
+            </li>
+            <li class="auth__item">
+              <a href="#" onclick="showForm(); return false;" class="auth__link auth__link_registration">Регистрация</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__middle">
+        <div class="header-logo">
+          <a class="header-logo__link" href="/">
+            <img class="header-logo__image" src="/web/images/flower-shop.png" alt="">
+          </a>
+        </div>
+        <form class="search-form" action="#" method="post">
+          <input class="search-form__content" type="text" placeholder="Поиск товара">
+          <button class="search-form__button">Искать</button>
+        </form>
+        <div class="basket">
+          <img class="basket__image" src="/web/images/basket.png" alt="">
+        </div>
+      </div>
+      <div class="header__bottom">
+
       </div>
     </div>
     <?php require_once __DIR__ . '/../../views/user/registration.php'; ?>

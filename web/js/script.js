@@ -6,3 +6,7 @@ function showForm() {
     document.getElementById('registration-form').style.display = "block";
   }
 }
+
+function closeForm() {
+  document.getElementById('registration-form').style.display = "none";
+}
