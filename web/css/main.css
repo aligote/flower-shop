@@ -6,7 +6,7 @@
 
 }
 
-.header__top {
+.header__wrapper_top {
   height: 50px;
   display: flex;
   align-items: center;
@@ -178,9 +178,10 @@
   border-radius: 5px;
 }
 
-.header__middle {
+.header__wrapper_middle {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .header-logo__image {
@@ -219,4 +220,37 @@
 .basket__image {
   width: 70px;
   height: 70px;
+}
+
+.header__wrapper_bottom {
+
+}
+
+.catalog__list {
+  display: flex;
+  justify-content: center;
+  background: #68AE55;
+  border-radius: 30px;
+}
+
+.catalog__item {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-right: 1px solid white;
+}
+
+.catalog__link {
+  text-decoration: none;
+  color: white;
+  padding: 15px 30px;
+}
+
+.catalog__item:first-child {
+  border-left: 1px solid white;
+}
+
+.catalog__link:hover {
+  background: #FF9900;
 }

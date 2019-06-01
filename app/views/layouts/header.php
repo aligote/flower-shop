@@ -11,7 +11,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header__top">
+      <div class="header__wrapper_top">
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -54,7 +54,7 @@
           </ul>
         </div>
       </div>
-      <div class="header__middle">
+      <div class="header__wrapper_middle">
         <div class="header-logo">
           <a class="header-logo__link" href="/">
             <img class="header-logo__image" src="/web/images/flower-shop.png" alt="">
@@ -68,8 +68,29 @@
           <img class="basket__image" src="/web/images/basket.png" alt="">
         </div>
       </div>
-      <div class="header__bottom">
-
+      <div class="header__wrapper_bottom">
+        <div class="catalog">
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Розы</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Тюльпаны</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Пионы</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Букеты</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">101 роза</a>
+            </li>
+            <li class="catalog__item">
+              <a class="catalog__link" href="#">Цветы в коробке</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <?php require_once __DIR__ . '/../../views/user/registration.php'; ?>
