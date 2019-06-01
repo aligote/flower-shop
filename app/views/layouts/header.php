@@ -45,6 +45,9 @@
             <?php
             else:
               ?>
+              <li class="auth__item">
+                <a href="/add-product" class="auth__link auth__link_exit">Добавить товар</a>
+              </li>
             <li class="auth__item">
               <a href="/output" class="auth__link auth__link_exit">Выход</a>
             </li>
@@ -69,25 +72,25 @@
         </div>
       </div>
       <div class="header__wrapper_bottom">
-        <div class="catalog">
-          <ul class="catalog__list">
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">Розы</a>
+        <div class="catalog-nav">
+          <ul class="catalog-nav__list">
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Розы</a>
             </li>
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">Тюльпаны</a>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Тюльпаны</a>
             </li>
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">Пионы</a>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Пионы</a>
             </li>
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">Букеты</a>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Букеты</a>
             </li>
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">101 роза</a>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">101 роза</a>
             </li>
-            <li class="catalog__item">
-              <a class="catalog__link" href="#">Цветы в коробке</a>
+            <li class="catalog-nav__item">
+              <a class="catalog-nav__link" href="#">Цветы в коробке</a>
             </li>
           </ul>
         </div>

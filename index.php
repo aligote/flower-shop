@@ -2,10 +2,12 @@
 require "vendor/autoload.php";
 require 'ConnectDb.php';
 require "app/models/User.php";
+require "app/models/Catalog.php";
 
 session_start();
 $url = $_SERVER['REQUEST_URI'];
 $controller = [];
+
 if ($url == "/") {
   $controller = ["app\controllers\UserController", "index"];
 } elseif ($url == '/registration') {
