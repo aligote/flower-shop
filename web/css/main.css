@@ -80,6 +80,7 @@
   position: fixed;
   top: 20%;
   left: 38%;
+  z-index: 100;
 }
 
 .registration-form__title {
@@ -139,6 +140,8 @@
   position: fixed;
   top: 20%;
   left: 38%;
+  z-index: 100;
+
 }
 
 .authorization-form__title {
