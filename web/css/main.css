@@ -188,16 +188,17 @@
 }
 
 .header-logo__image {
-  width: 100px;
   height: 100px;
+  width: 300px;
 }
 
 .search-form {
   margin-top: 30px;
+  margin-left: -150px;
 }
 
 .search-form__content {
-  padding: 10px 15px 10px 15px;
+  padding: 10px 80px 10px 15px;
   border: 2px solid #ddd;
   border-radius: 10px;
   outline: none;
