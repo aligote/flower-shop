@@ -1,15 +1,16 @@
 <?php
 require "vendor/autoload.php";
-require 'ConnectDb.php';
+require "ConnectDb.php";
 require "app/models/User.php";
 require "app/models/Catalog.php";
+require "app/models/Product.php";
 
 session_start();
 $url = $_SERVER['REQUEST_URI'];
 $controller = [];
 
 if ($url == "/") {
-  $controller = ["app\controllers\UserController", "index"];
+  $controller = ["app\controllers\SiteController", "index"];
 } elseif ($url == '/registration') {
   $controller = ["app\controllers\UserController", "registration"];
 } elseif ($url == '/authorization') {

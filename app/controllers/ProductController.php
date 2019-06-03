@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
-class СatalogController {
+class ProductController
+{
 
 }

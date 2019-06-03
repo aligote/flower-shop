@@ -1,5 +1,6 @@
 <?php
 class Catalog {
+
   public static function add() {
 
   }

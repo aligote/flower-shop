@@ -5,11 +5,6 @@ use User;
 
 class UserController
 {
-  public function index()
-  {
-    require 'app/views/site/index.php';
-  }
-
   public function registration()
   {
     if (isset($_POST['submit'])) {
