@@ -35,7 +35,7 @@
 .nav__link:hover {
   color: #69AF56;
   padding-bottom: 14px;
-  border-bottom: 2px solid #68AE55;
+  border-bottom: 2px solid #61AC43;
 }
 
 .auth__list {
@@ -47,7 +47,7 @@
 }
 
 .auth__link {
-  background: #68AE55;
+  background: #61AC43;
   text-decoration: none;
   color: white;
   padding: 10px 10px 10px 40px;
@@ -113,7 +113,7 @@
   height: 40px;
   cursor: pointer;
   outline: none;
-  background: #68AE55;
+  background: #61AC43;
   text-decoration: none;
   border: none;
   color: white;
@@ -174,7 +174,7 @@
   height: 40px;
   cursor: pointer;
   outline: none;
-  background: #68AE55;
+  background: #61AC43;
   text-decoration: none;
   border: none;
   color: white;
@@ -209,7 +209,7 @@
   border: none;
   margin-left: 10px;
   border-radius: 10px;
-  background: #68AE55;
+  background: #61AC43;
   width: 100px;
   height: 40px;
   cursor: pointer;
@@ -233,7 +233,7 @@
 .catalog-nav__list {
   display: flex;
   justify-content: center;
-  background: #68AE55;
+  background: #61AC43;
   border-radius: 30px;
 }
 
@@ -299,7 +299,7 @@
   height: 40px;
   cursor: pointer;
   outline: none;
-  background: #68AE55;
+  background: #61AC43;
   text-decoration: none;
   border: none;
   color: white;
@@ -313,7 +313,7 @@
   padding: 5px 10px;
   cursor: pointer;
   outline: none;
-  background: #68AE55;
+  background: #61AC43;
   text-decoration: none;
   border: none;
   color: white;
