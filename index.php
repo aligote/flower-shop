@@ -1,11 +1,16 @@
 <?php
+session_start();
+define("ROOT", dirname(__FILE__));
+require_once ROOT."/components/Router.php";
 require "vendor/autoload.php";
 require "ConnectDb.php";
 require "app/models/User.php";
 require "app/models/Catalog.php";
 require "app/models/Product.php";
 
-session_start();
+$router = new Router();
+$router->run();
+
 $url = $_SERVER['REQUEST_URI'];
 $controller = [];
 
