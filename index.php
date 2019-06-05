@@ -1,31 +1,46 @@
 <?php
+
+use DI\Container;
+
 session_start();
-define("ROOT", dirname(__FILE__));
-require_once ROOT."/components/Router.php";
 require "vendor/autoload.php";
 require "ConnectDb.php";
 require "app/models/User.php";
 require "app/models/Catalog.php";
 require "app/models/Product.php";
 
-$router = new Router();
-$router->run();
 
-$url = $_SERVER['REQUEST_URI'];
-$controller = [];
+$dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
+  $r->addRoute('GET', '/', ["app\controllers\SiteController", "index"]);
+  $r->addRoute('GET', '/product/{id:\d+}', ["app\controllers\ProductController", "activeView"]);
+  $r->addRoute('GET', '/registration}', ["app\controllers\UserController", "registration"]);
+  $r->addRoute('GET', '/authorization}', ["app\controllers\UserController", "authorization"]);
+  $r->addRoute('GET', '/output}', ["app\controllers\UserController", "output"]);
+});
 
-if ($url == "/") {
-  $controller = ["app\controllers\SiteController", "index"];
-} elseif ($url == '/registration') {
-  $controller = ["app\controllers\UserController", "registration"];
-} elseif ($url == '/authorization') {
-  $controller = ["app\controllers\UserController", "authorization"];
-} elseif ($url == "/output") {
-  $controller = ["app\controllers\UserController", "output"];
+// Fetch method and URI from somewhere
+$httpMethod = $_SERVER['REQUEST_METHOD'];
+$uri = $_SERVER['REQUEST_URI'];
+
+// Strip query string (?foo=bar) and decode URI
+if (false !== $pos = strpos($uri, '?')) {
+  $uri = substr($uri, 0, $pos);
 }
+$uri = rawurldecode($uri);
 
-if(empty($controller)) {
-  var_dump('404 | ERROR');die;
-} else {
-  call_user_func($controller);
+$routeInfo = $dispatcher->dispatch($httpMethod, $uri);
+switch ($routeInfo[0]) {
+  case FastRoute\Dispatcher::NOT_FOUND:
+    // ... 404 Not Found
+    break;
+  case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
+    $allowedMethods = $routeInfo[1];
+    // ... 405 Method Not Allowed
+    break;
+  case FastRoute\Dispatcher::FOUND:
+    $handler = $routeInfo[1];
+    $vars = $routeInfo[2];
+    $container = new Container();
+    $container->call($handler, $vars);
+    break;
 }

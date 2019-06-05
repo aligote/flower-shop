@@ -1,7 +1,4 @@
-<?php require_once __DIR__ . '/../layouts/header.php';
-    $product= Product::getProduct();
-    session_start();
-?>
+<?php require_once __DIR__ . '/../layouts/header.php'; ?>
 <main class="main">
   <div class="container">
     <div class="product">

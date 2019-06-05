@@ -2,12 +2,12 @@
 
 namespace app\controllers;
 
-
+use Product;
 
 class ProductController
 {
-  public static function activeView($id) {
-    require_once ROOT.'/app/views/product/view.php';
-    return true;
+  public function activeView($id) {
+    $product = Product::getProduct($id);
+    require_once 'app/views/product/view.php';
   }
 }

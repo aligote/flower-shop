@@ -11,12 +11,9 @@ class Product
     return $result->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public static function getProduct() {
+  public static function getProduct($id) {
     $db = ConnectDb::getConnection();
-    $sql = "SELECT * FROM products WHERE id=:id";
-    $result = $db->prepare($sql);
-    $result->bindParam(':id', $_GET['id']);
-    $result->execute();
+    $result = $db->query('SELECT * FROM products WHERE id=' . $id);
     return $result->fetch(PDO::FETCH_ASSOC);
   }
 }
