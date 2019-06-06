@@ -16,4 +16,10 @@ class Product
     $result = $db->query('SELECT * FROM products WHERE id=' . $id);
     return $result->fetch(PDO::FETCH_ASSOC);
   }
+
+  public static function getProducts() {
+    $db = ConnectDb::getConnection();
+    $result = $db->query('SELECT * FROM products ORDER BY id DESC');
+    return $result->fetchAll(PDO::FETCH_ASSOC);
+  }
 }

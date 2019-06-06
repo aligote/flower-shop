@@ -46,7 +46,7 @@
             else:
               ?>
               <li class="auth__item">
-                <a href="/add-product" class="auth__link auth__link_exit">Добавить товар</a>
+                <a href="/products" class="auth__link auth__link_exit">Товары</a>
               </li>
             <li class="auth__item">
               <a href="/output" class="auth__link auth__link_exit">Выход</a>
