@@ -73,7 +73,6 @@
   margin: 0 auto;
   padding: 15px;
   width: 300px;
-  height: 300px;
   border-radius: 10px;
   text-align: center;
   background: dimgray;
@@ -133,7 +132,6 @@
   margin: 0 auto;
   padding: 15px;
   width: 300px;
-  height: 200px;
   border-radius: 10px;
   text-align: center;
   background: dimgray;
@@ -384,5 +382,63 @@
   width: 50px;
   height: 50px;
   border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.add-product {
+  display: flex;
+  justify-content: center;
+}
+
+#add-product-form {
+  display: block;
+}
+
+.add-product-form {
+  margin: 0 auto;
+  padding: 15px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  background: dimgray;
+  position: fixed;
+  top: 20%;
+  left: 38%;
+  z-index: 100;
+
+}
+
+.add-product-form__title {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.add-product-form__icon {
+  width: 35px;
+  height: 35px;
+  top: 7px;
+  right: 7px;
+  position: absolute;
+}
+
+.add-product-form__title,
+.add-product-form__code {
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.add-product-form__button {
+  margin-top: 10px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  background: #61AC43;
+  text-decoration: none;
+  border: none;
+  color: white;
   border-radius: 5px;
 }

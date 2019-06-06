@@ -13,10 +13,11 @@ require "app/models/Product.php";
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
   $r->addRoute('GET', '/', ["app\controllers\SiteController", "index"]);
   $r->addRoute('GET', '/product/{id:\d+}', ["app\controllers\ProductController", "activeView"]);
-  $r->addRoute('GET', '/products', ["app\controllers\SiteController", "products"]);
+  $r->addRoute('GET', '/products', ["app\controllers\ProductController", "products"]);
   $r->addRoute('POST', '/registration', ["app\controllers\UserController", "registration"]);
   $r->addRoute('POST', '/authorization', ["app\controllers\UserController", "authorization"]);
   $r->addRoute('GET', '/output', ["app\controllers\UserController", "output"]);
+  $r->addRoute('POST', '/add-product', ["app\controllers\ProductController", "addProduct"]);
 });
 
 // Fetch method and URI from somewhere

@@ -5,7 +5,7 @@ $latestProducts = Product::getProducts();
   <main class="main">
     <div class="container">
       <table class="product-table">
-        <button class="product-table__button product-table__button_green">Добавить товар</button>
+        <a href="#" class="product-table__button product-table__button_green">Добавить товар</a>
         <tr class="product-table__row">
           <th class="product-table__cell-header">Id</th>
           <th class="product-table__cell-header">Картинка</th>
@@ -24,21 +24,14 @@ $latestProducts = Product::getProducts();
             <td class="product-table__cell"><?=$product['code']?></td>
             <td class="product-table__cell"><?=$product['price']?></td>
             <td class="product-table__cell">
-              <button class="product-table__button product-table__button_yellow">Редактировать</button>
-              <button class="product-table__button product-table__button_red">Удалить</button>
+              <a href="#" class="product-table__button product-table__button_yellow">Редактировать</a>
+              <a href="#" class="product-table__button product-table__button_red">Удалить</a>
             </td>
           </tr>
         <?php endforeach; ?>
       </table>
-      <div class="product-add">
-
-      </div>
-      <div class="product-edit">
-
-      </div>
-      <div class="product-delete">
-
-      </div>
     </div>
+    <?php require_once __DIR__ . '/../../views/product/addproduct.php'; ?>
+    <?php require_once __DIR__ . '/../../views/product/editproduct.php'; ?>
   </main>
 <?php require_once __DIR__ . '/../layouts/footer.php'; ?>

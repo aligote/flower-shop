@@ -22,4 +22,17 @@ class Product
     $result = $db->query('SELECT * FROM products ORDER BY id DESC');
     return $result->fetchAll(PDO::FETCH_ASSOC);
   }
+
+  public static function addProduct() {
+    $db = ConnectDb::getConnection();
+
+  }
+
+  public static function editProduct() {
+
+  }
+
+  public static function deleteProduct() {
+
+  }
 }
