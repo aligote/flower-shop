@@ -13,9 +13,9 @@ require "app/models/Product.php";
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
   $r->addRoute('GET', '/', ["app\controllers\SiteController", "index"]);
   $r->addRoute('GET', '/product/{id:\d+}', ["app\controllers\ProductController", "activeView"]);
-  $r->addRoute('GET', '/registration}', ["app\controllers\UserController", "registration"]);
-  $r->addRoute('GET', '/authorization}', ["app\controllers\UserController", "authorization"]);
-  $r->addRoute('GET', '/output}', ["app\controllers\UserController", "output"]);
+  $r->addRoute('POST', '/registration', ["app\controllers\UserController", "registration"]);
+  $r->addRoute('POST', '/authorization', ["app\controllers\UserController", "authorization"]);
+  $r->addRoute('GET', '/output', ["app\controllers\UserController", "output"]);
 });
 
 // Fetch method and URI from somewhere
@@ -31,11 +31,11 @@ $uri = rawurldecode($uri);
 $routeInfo = $dispatcher->dispatch($httpMethod, $uri);
 switch ($routeInfo[0]) {
   case FastRoute\Dispatcher::NOT_FOUND:
-    // ... 404 Not Found
+    var_dump("Страница не существует");
     break;
   case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
     $allowedMethods = $routeInfo[1];
-    // ... 405 Method Not Allowed
+    var_dump("Метод не существует");
     break;
   case FastRoute\Dispatcher::FOUND:
     $handler = $routeInfo[1];
