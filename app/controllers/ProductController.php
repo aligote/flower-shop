@@ -17,7 +17,7 @@ class ProductController
 
   public function addProduct() {
     if (isset($_POST['submit'])) {
-      Product::addProduct($_FILES['image'], $_POST['title'], $_POST['code'], $_POST['price']);
+      Product::addProduct($_POST['title'], $_POST['code'], $_POST['price']);
     }
     require 'app/views/product/producttable.php';
   }

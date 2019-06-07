@@ -1,7 +1,7 @@
 <?php
 class Product
 {
-  const SHOW_BY_DEFAULT = 10;
+  const SHOW_BY_DEFAULT = 12;
 
   public static function getLatestProducts($count = self::SHOW_BY_DEFAULT) {
     $count = intval($count);
@@ -23,9 +23,12 @@ class Product
     return $result->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public static function addProduct($image, $title, $code, $price) {
+  public static function addProduct($title, $code, $price) {
     $db = ConnectDb::getConnection();
-    $sql = "INSERT INTO users(image, title, code, price) VALUES (:image, :title, :code, :price)";
+    $image = $_FILES['image']['name'];
+    $tmpName = $_FILES['image']['tmp_name'];
+    move_uploaded_file($tmpName, 'web/images/' . $image);
+    $sql = "INSERT INTO products(image, title, code, price) VALUES (:image, :title, :code, :price)";
     $statement = $db->prepare($sql);
     $statement->bindParam(':image', $image);
     $statement->bindParam(':title', $title);

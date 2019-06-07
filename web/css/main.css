@@ -398,7 +398,7 @@
   display: block;
   margin: 0 auto;
   padding: 15px;
-  width: 300px;
+  width: 350px;
   border-radius: 10px;
   text-align: center;
   background: dimgray;
@@ -409,9 +409,9 @@
 
 }
 
-.add-product-form__title {
-  color: white;
+.add-product-form__form-title {
   margin-bottom: 15px;
+  color: white;
 }
 
 .add-product-form__icon {
@@ -427,7 +427,7 @@
 .add-product-form__price {
   border-radius: 5px;
   border: none;
-  padding: 10px 15px 10px 15px;
+  padding: 10px 90px 10px 15px;
   margin-bottom: 10px;
   outline: none;
 }
@@ -453,7 +453,7 @@
   display: inline-block;
   background: #FFC107;
   cursor: pointer;
-  padding: 10px 15px 10px 15px;
+  padding: 10px 90px 10px 15px;
   margin-bottom: 10px;
   text-align: center;
   border-radius: 5px;
