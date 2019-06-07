@@ -5,7 +5,7 @@ $latestProducts = Product::getProducts();
   <main class="main">
     <div class="container">
       <table class="product-table">
-        <a href="#" class="product-table__button product-table__button_green">Добавить товар</a>
+        <a href="#" class="product-table__button product-table__button_green" onclick="showForm('add-product-form'); return false;">Добавить товар</a>
         <tr class="product-table__row">
           <th class="product-table__cell-header">Id</th>
           <th class="product-table__cell-header">Картинка</th>
@@ -20,7 +20,7 @@ $latestProducts = Product::getProducts();
             <td class="product-table__cell">
               <img class="product-table__image" src="/web/images/<?=$product['image']?>" alt="">
             </td>
-            <td class="product-table__cell"><?=$product['name']?></td>
+            <td class="product-table__cell"><?=$product['title']?></td>
             <td class="product-table__cell"><?=$product['code']?></td>
             <td class="product-table__cell"><?=$product['price']?></td>
             <td class="product-table__cell">

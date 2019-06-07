@@ -391,10 +391,11 @@
 }
 
 #add-product-form {
-  display: block;
+  display: none;
 }
 
 .add-product-form {
+  display: block;
   margin: 0 auto;
   padding: 15px;
   width: 300px;
@@ -422,7 +423,8 @@
 }
 
 .add-product-form__title,
-.add-product-form__code {
+.add-product-form__code,
+.add-product-form__price {
   border-radius: 5px;
   border: none;
   padding: 10px 15px 10px 15px;
@@ -440,5 +442,19 @@
   text-decoration: none;
   border: none;
   color: white;
+  border-radius: 5px;
+}
+
+.add-product__file {
+  display: none;
+}
+
+.add-product__image {
+  display: inline-block;
+  background: #FFC107;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 10px;
+  text-align: center;
   border-radius: 5px;
 }
