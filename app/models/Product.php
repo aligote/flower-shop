@@ -43,6 +43,7 @@ class Product
   }
 
   public static function deleteProduct() {
+    $db = ConnectDb::getConnection();
 
   }
 }

@@ -12,13 +12,13 @@ class ProductController
   }
 
   public function products() {
-    require 'app/views/product/producttable.php';
+    require 'app/views/product/table.php';
   }
 
   public function addProduct() {
     if (isset($_POST['submit'])) {
       Product::addProduct($_POST['title'], $_POST['code'], $_POST['price']);
     }
-    require 'app/views/product/producttable.php';
+    require 'app/views/product/table.php';
   }
 }

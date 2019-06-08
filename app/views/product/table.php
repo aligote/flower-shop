@@ -31,7 +31,7 @@ $latestProducts = Product::getProducts();
         <?php endforeach; ?>
       </table>
     </div>
-    <?php require_once __DIR__ . '/../../views/product/addproduct.php'; ?>
-    <?php require_once __DIR__ . '/../../views/product/editproduct.php'; ?>
+    <?php require_once __DIR__ . '/../../views/product/add.php'; ?>
+    <?php require_once __DIR__ . '/../../views/product/edit.php'; ?>
   </main>
 <?php require_once __DIR__ . '/../layouts/footer.php'; ?>
