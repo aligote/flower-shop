@@ -39,11 +39,13 @@ class Product
   }
 
   public static function editProduct() {
-
+    $db = ConnectDb::getConnection();
   }
 
-  public static function deleteProduct() {
+  public static function deleteProduct($id) {
     $db = ConnectDb::getConnection();
-
+    $statement = $db->query('DELETE FROM products WHERE id=' . $id);
+    $statement->execute();
+    header('Location: /products');
   }
 }

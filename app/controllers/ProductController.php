@@ -21,4 +21,9 @@ class ProductController
     }
     require 'app/views/product/table.php';
   }
+
+  public function deleteProduct($id) {
+    Product::deleteProduct($id);
+    require 'app/views/product/table.php';
+  }
 }
