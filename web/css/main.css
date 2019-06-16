@@ -387,6 +387,20 @@
   border-radius: 5px;
 }
 
+.product-view {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-view-left__image {
+  width: 550px;
+  height: 550px;
+}
+
+.product-view-right {
+  margin-right: 30%;
+}
+
 .add-product {
   display: flex;
   justify-content: center;
