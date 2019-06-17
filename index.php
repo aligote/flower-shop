@@ -18,6 +18,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
   $r->addRoute('POST', '/authorization', ["app\controllers\UserController", "authorization"]);
   $r->addRoute('GET', '/output', ["app\controllers\UserController", "output"]);
   $r->addRoute('POST', '/add-product', ["app\controllers\ProductController", "addProduct"]);
+  $r->addRoute('POST', '/edit-product/{id:\d+}', ["app\controllers\ProductController", "editProduct"]);
   $r->addRoute('GET', '/delete-product/{id:\d+}', ["app\controllers\ProductController", "deleteProduct"]);
 });
 

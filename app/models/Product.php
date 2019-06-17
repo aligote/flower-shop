@@ -38,8 +38,23 @@ class Product
     header('Location: /products');
   }
 
-  public static function editProduct() {
+  public static function viewEditProduct() {
+
+  }
+
+  public static function editProduct($title, $code, $price) {
     $db = ConnectDb::getConnection();
+    $image = $_FILES['image']['name'];
+    $tmpName = $_FILES['image']['tmp_name'];
+    move_uploaded_file($tmpName, 'web/images/' . $image);
+    $sql = "UPDATE products SET 'image' = 'image', 'title' = 'title', 'code' = 'code', 'price' = 'price'";
+    $statement = $db->prepare($sql);
+    $statement->bindParam(':image', $image);
+    $statement->bindParam(':title', $title);
+    $statement->bindParam(':code', $code);
+    $statement->bindParam(':price', $price);
+    $statement->execute();
+    header('Location: /products');
   }
 
   public static function deleteProduct($id) {

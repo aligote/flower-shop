@@ -24,7 +24,7 @@ $latestProducts = Product::getProducts();
             <td class="product-table__cell"><?=$product['code']?></td>
             <td class="product-table__cell"><?=$product['price']?></td>
             <td class="product-table__cell">
-              <a href="#" class="product-table__button product-table__button_yellow">Редактировать</a>
+              <a href="/edit-product/<?php echo $product['id'] ?>" class="product-table__button product-table__button_yellow" onclick="showForm('edit-product-form'); return false;">Редактировать</a>
               <a href="/delete-product/<?php echo $product['id'] ?>" class="product-table__button product-table__button_red">Удалить</a>
             </td>
           </tr>

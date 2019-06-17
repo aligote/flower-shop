@@ -1,6 +1,6 @@
 <div class="add-product">
   <div class="container">
-    <form class="add-product-form"  id="add-product-form" action="/add-product" method="post" enctype="multipart/form-data">
+    <form class="add-product-form"  id="add-product-form" action="#" method="post" enctype="multipart/form-data">
       <h2 class="add-product-form__form-title">Форма добавления товара</h2>
       <a class="add-product-form__link" href="#" onclick="closeForm('add-product-form'); return false;">
         <img class="add-product-form__icon" src="/web/icons/close.png" alt="">
