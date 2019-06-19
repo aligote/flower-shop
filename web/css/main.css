@@ -561,3 +561,32 @@
   height: 150px;
   margin-bottom: 10px;
 }
+
+.reviews__name {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.reviews__text {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+.reviews__button {
+  margin-top: 10px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  background: #61AC43;
+  text-decoration: none;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}

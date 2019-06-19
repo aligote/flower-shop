@@ -20,6 +20,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
   $r->addRoute('POST', '/add-product', ["app\controllers\ProductController", "addProduct"]);
   $r->addRoute('POST', '/edit-product/{id:\d+}', ["app\controllers\ProductController", "editProduct"]);
   $r->addRoute('GET', '/delete-product/{id:\d+}', ["app\controllers\ProductController", "deleteProduct"]);
+  $r->addRoute('GET', '/reviews', ["app\controllers\ReviewController", "view"]);
 });
 
 // Fetch method and URI from somewhere

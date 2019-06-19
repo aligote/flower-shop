@@ -18,16 +18,16 @@
               <a href="/" class="nav__link">Главная</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Новости</a>
+              <a href="/news" class="nav__link">Новости</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Отзывы</a>
+              <a href="/reviews" class="nav__link">Отзывы</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Контакты</a>
+              <a href="/contacts" class="nav__link">Контакты</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">О нас</a>
+              <a href="/about-us" class="nav__link">О нас</a>
             </li>
           </ul>
         </nav>
