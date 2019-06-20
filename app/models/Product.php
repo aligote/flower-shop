@@ -38,10 +38,6 @@ class Product
     header('Location: /products');
   }
 
-  public static function viewEditProduct() {
-
-  }
-
   public static function editProduct($title, $code, $price) {
     $db = ConnectDb::getConnection();
     $image = $_FILES['image']['name'];

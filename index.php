@@ -8,6 +8,8 @@ require "ConnectDb.php";
 require "app/models/User.php";
 require "app/models/Catalog.php";
 require "app/models/Product.php";
+require "app/models/Review.php";
+require "app/models/News.php";
 
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
@@ -21,6 +23,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
   $r->addRoute('POST', '/edit-product/{id:\d+}', ["app\controllers\ProductController", "editProduct"]);
   $r->addRoute('GET', '/delete-product/{id:\d+}', ["app\controllers\ProductController", "deleteProduct"]);
   $r->addRoute('GET', '/reviews', ["app\controllers\ReviewController", "view"]);
+  $r->addRoute('POST', '/add-review', ["app\controllers\ReviewController", "addReview"]);
+  $r->addRoute('GET', '/delete-review/{id:\d+}', ["app\controllers\ReviewController", "deleteReview"]);
 });
 
 // Fetch method and URI from somewhere

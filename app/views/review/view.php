@@ -1,12 +1,18 @@
-<?php require_once __DIR__ . '/../layouts/header.php'; ?>
-<main class="main">
+<?php
+$latestReviews = Review::getLatestReview();
+?>
+<div class="reviews">
   <div class="container">
-    <form class="reviews" action="#" method="post">
-      <h2 class="reviews__title">Введите ваш отзыв:</h2><br>
-      <input class="reviews__name" type="text" name="name" placeholder="Введите ваше Имя"><br>
-      <textarea class="reviews__text" rows="5" cols="100" name="text" placeholder="Введите текст отзыва"></textarea><br>
-      <button class="reviews__button" type="submit" name="submit">Опубликовать</button>
-    </form>
+    <ul class="reviews__list">
+      <?php foreach ($latestReviews as $review): ?>
+        <li class="reviews__item">
+          <h3 class="reviews__name"><?php echo $review['name'] ?></h3>
+          <p class="reviews__text"><?php echo $review['text'] ?></p>
+          <a class="reviews__link" href="/delete-review/<?php echo $review['id'] ?>">
+            <img class="reviews__icon" src="/web/icons/close.png" alt="">
+          </a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
   </div>
-</main>
-<?php require_once __DIR__ . '/../layouts/footer.php'; ?>
+</div>

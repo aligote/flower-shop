@@ -562,7 +562,7 @@
   margin-bottom: 10px;
 }
 
-.reviews__name {
+.add-review-form__name {
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 10px;
@@ -570,14 +570,14 @@
   margin-bottom: 10px;
 }
 
-.reviews__text {
+.add-review-form__text {
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 10px;
   outline: none;
 }
 
-.reviews__button {
+.add-review-form__button {
   margin-top: 10px;
   width: 150px;
   height: 40px;
@@ -589,4 +589,27 @@
   color: white;
   border-radius: 5px;
   margin-bottom: 30px;
+}
+
+.reviews__item {
+  position: relative;
+  padding: 15px;
+  width: 70%;
+  height: 50px;
+  border-radius: 5px;
+  margin: 10px;
+  list-style: none;
+  border: 1px solid #D9D9D9;
+}
+
+.reviews__name {
+  margin-bottom: 10px;
+}
+
+.reviews__icon {
+  width: 25px;
+  height: 25px;
+  top: 3px;
+  right: 3px;
+  position: absolute;
 }
