@@ -8,7 +8,7 @@ use News;
 
 class NewsController
 {
-  public function view() {
+  public function index() {
     require 'app/views/news/index.php';
   }
 
