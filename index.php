@@ -25,7 +25,9 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
   $r->addRoute('GET', '/reviews', ["app\controllers\ReviewController", "view"]);
   $r->addRoute('POST', '/add-review', ["app\controllers\ReviewController", "addReview"]);
   $r->addRoute('GET', '/delete-review/{id:\d+}', ["app\controllers\ReviewController", "deleteReview"]);
-  $r->addRoute('GET', '/news', ["app\controllers\ReviewController", "view"]);
+  $r->addRoute('GET', '/news', ["app\controllers\NewsController", "view"]);
+  $r->addRoute('GET', '/add-news', ["app\controllers\NewsController", "addNews"]);
+  $r->addRoute('POST', '/add-news', ["app\controllers\NewsController", "addNews"]);
 });
 
 // Fetch method and URI from somewhere
