@@ -7,7 +7,7 @@ class News
   public static function getLatestNews($count = self::SHOW_BY_DEFAULT) {
     $count = intval($count);
     $db = ConnectDb::getConnection();
-    $result = $db->query("SELECT id, title, text FROM news 
+    $result = $db->query("SELECT id, title, text, image, date FROM news 
                                     ORDER BY id DESC LIMIT $count");
     return $result->fetchAll(PDO::FETCH_ASSOC);
   }
@@ -36,6 +36,13 @@ class News
     $statement->bindParam(':text', $text);
     $statement->bindParam(':date', $date);
     $statement->execute();
-    header('Location: /add-news');
+    header('Location: /news');
+  }
+
+  public static function deleteNews($id) {
+    $db = ConnectDb::getConnection();
+    $statement = $db->query('DELETE FROM news WHERE id=' . $id);
+    $statement->execute();
+    header('Location: /news');
   }
 }

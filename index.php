@@ -28,6 +28,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
   $r->addRoute('GET', '/news', ["app\controllers\NewsController", "index"]);
   $r->addRoute('GET', '/add-news', ["app\controllers\NewsController", "addNews"]);
   $r->addRoute('POST', '/add-news', ["app\controllers\NewsController", "addNews"]);
+  $r->addRoute('GET', '/news/{id:\d+}', ["app\controllers\NewsController", "activeView"]);
+  $r->addRoute('GET', '/delete-news/{id:\d+}', ["app\controllers\NewsController", "deleteNews"]);
   $r->addRoute('GET', '/contacts', ["app\controllers\SiteController", "contacts"]);
   $r->addRoute('GET', '/about-us', ["app\controllers\SiteController", "aboutUs"]);
 

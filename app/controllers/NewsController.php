@@ -18,4 +18,14 @@ class NewsController
     }
     require 'app/views/news/add.php';
   }
+
+  public function activeView($id) {
+    $news = News::getOneNews($id);
+    require_once 'app/views/news/view.php';
+  }
+
+  public function deleteNews($id) {
+    News::deleteNews($id);
+    require 'app/views/news/index.php';
+  }
 }

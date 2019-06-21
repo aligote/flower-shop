@@ -6,13 +6,19 @@ $latestNews = News::getLatestNews();
     <div class="news">
       <div class="container">
         <ul class="news__list">
+          <a class="news__link-add" href="/add-news">Добавить новость</a>
           <?php foreach ($latestNews as $news): ?>
             <li class="news__item">
-              <h3 class="news__title"><?php echo $news['title'] ?></h3>
-              <img class="news__image" src="/web/images/<?php echo $news['image'] ?>" alt="">
-              <h2 class="news__price">Цена: <?php echo $news['text'] ?> ₽</h2>
-              <p class="news__date"><?php echo $news['date'] ?></p>
-              <a href="/news/<?php echo $news['id'] ?>" class="news__details">Подробнее</a>
+              <a class="news__link" href="/news/<?php echo $news['id'] ?>">
+                <img class="news__image" src="/web/images/<?php echo $news['image'] ?>" alt="">
+                <div>
+                  <h3 class="news__title"><?php echo $news['title'] ?></h3>
+                  <span class="news__date"><?php echo $news['date'] ?></span>
+                </div>
+              </a>
+              <a class="news__link-delete" href="/delete-news/<?php echo $news['id'] ?>">
+                <img class="news__icon" src="/web/icons/close.png" alt="">
+              </a>
             </li>
           <?php endforeach; ?>
         </ul>
