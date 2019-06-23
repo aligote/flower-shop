@@ -75,22 +75,22 @@
         <div class="catalog-nav">
           <ul class="catalog-nav__list">
             <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Розы</a>
+              <a class="catalog-nav__link" href="/catalog/roses">Розы</a>
             </li>
             <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Тюльпаны</a>
+              <a class="catalog-nav__link" href="/catalog/tulips">Тюльпаны</a>
             </li>
             <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Пионы</a>
+              <a class="catalog-nav__link" href="/catalog/peonies">Пионы</a>
             </li>
             <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Букеты</a>
+              <a class="catalog-nav__link" href="/catalog/bouquets">Букеты</a>
             </li>
             <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">101 роза</a>
+              <a class="catalog-nav__link" href="/catalog/101-roses">101 роза</a>
             </li>
             <li class="catalog-nav__item">
-              <a class="catalog-nav__link" href="#">Цветы в коробке</a>
+              <a class="catalog-nav__link" href="/catalog/flowers-in-a-box">Цветы в коробке</a>
             </li>
           </ul>
         </div>

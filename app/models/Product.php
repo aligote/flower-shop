@@ -23,16 +23,18 @@ class Product
     return $result->fetchAll(PDO::FETCH_ASSOC);
   }
 
-  public static function addProduct($title, $code, $price) {
+  public static function addProduct($categoryId, $title, $code, $composition, $price) {
     $db = ConnectDb::getConnection();
     $image = $_FILES['image']['name'];
     $tmpName = $_FILES['image']['tmp_name'];
     move_uploaded_file($tmpName, 'web/images/' . $image);
-    $sql = "INSERT INTO products(image, title, code, price) VALUES (:image, :title, :code, :price)";
+    $sql = "INSERT INTO products(category_id, image, title, code, composition, price) VALUES (:categoryId, :image, :title, :code, :composition, :price)";
     $statement = $db->prepare($sql);
+    $statement->bindParam(':categoryId', $categoryId);
     $statement->bindParam(':image', $image);
     $statement->bindParam(':title', $title);
     $statement->bindParam(':code', $code);
+    $statement->bindParam(':composition', $composition);
     $statement->bindParam(':price', $price);
     $statement->execute();
     header('Location: /products');

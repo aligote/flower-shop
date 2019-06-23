@@ -8,6 +8,7 @@
       <div class="product-view-right">
        <h2 class="product-view-right__title">Название: <?php echo $product['title'] ?></h2>
         <h3 class="product-view-right__article">Артикул: <?php echo $product['code'] ?></h3>
+        <p class="product-view-right__composition">Состав товара: <?php echo $product['composition'] ?></p>
        <h3 class="product-view-right__price">Цена: <?php echo $product['price'] ?> ₽</h3>
        <a href="#" class="product-view-right__order">Заказать</a>
       </div>
