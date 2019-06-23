@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -33,27 +34,27 @@
         </nav>
         <div class="auth">
           <ul class="auth__list">
-            <?php
-            if($_COOKIE['email'] == ''):
-              ?>
+            <?php if($_COOKIE['email'] == ''): ?>
             <li class="auth__item">
               <a href="#" onclick="showForm('authorization-form'); return false;" class="auth__link auth__link_authorization">Вход</a>
             </li>
             <li class="auth__item">
               <a href="#" onclick="showForm('registration-form'); return false;" class="auth__link auth__link_registration">Регистрация</a>
             </li>
-            <?php
-            else:
-              ?>
+            <?php else: ?>
+            <?php if($_SESSION['admin'] == 1): ?>
               <li class="auth__item">
                 <a href="/products" class="auth__link auth__link_exit">Товары</a>
               </li>
+              <li class="auth__item">
+                <a href="/output" class="auth__link auth__link_exit">Выход</a>
+              </li>
+            <?php else: ?>
             <li class="auth__item">
               <a href="/output" class="auth__link auth__link_exit">Выход</a>
             </li>
-            <?php
-            endif;
-            ?>
+            <?php endif; ?>
+            <?php endif; ?>
           </ul>
         </div>
       </div>

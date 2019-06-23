@@ -5,7 +5,7 @@ class User {
     $sql = "INSERT INTO users(email, password, name, phone) VALUES (:email, :password, :name, :phone)";
     $statement = $db->prepare($sql);
     $statement->bindParam(':email', $email);
-    $statement->bindParam(':password', $password);
+    $statement->bindParam(':password', md5($password));
     $statement->bindParam(':name', $name);
     $statement->bindParam(':phone', $phone);
     $statement->execute();
@@ -14,16 +14,17 @@ class User {
 
   public static function authorization($email, $password) {
     $db = ConnectDb::getConnection();
-    $sql = "SELECT id FROM users WHERE email=:email AND password=:password";
+    $sql = "SELECT id, admin FROM users WHERE email=:email AND password=:password";
     $statement = $db->prepare($sql);
     $statement->bindParam(':email', $email);
-    $statement->bindParam(':password', $password);
+    $statement->bindParam(':password', md5($password));
     $statement->execute();
     $user = $statement->fetch(PDO::FETCH_OBJ);
     if ($user->id == 0) {
       header('Location: /');
     } else {
       setcookie('email', $email, time() + 3600 * 24 * 30, "/");
+      $_SESSION['admin'] = $user->admin;
       header('Location: /');
     }
   }
@@ -31,5 +32,9 @@ class User {
     setcookie('email', "", time() - 3600 * 24 * 30, "/");
     unset($_COOKIE['email']);
     header('Location: /');
+  }
+
+  public static function admin() {
+    return $_SESSION['admin'];
   }
 }

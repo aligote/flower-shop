@@ -26,7 +26,7 @@ class ProductController
     $product = Product::getProduct($id);
     require_once 'app/views/product/edit.php';
     if (isset($_POST['submit'])) {
-      Product::editProduct($_POST['title'], $_POST['code'], $_POST['price']);
+      Product::editProduct($_POST['category_id'], $_POST['title'], $_POST['code'], $_POST['composition'], $_POST['price']);
     }
     require 'app/views/product/table.php';
   }

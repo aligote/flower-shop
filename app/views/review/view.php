@@ -8,9 +8,11 @@ $latestReviews = Review::getLatestReview();
         <li class="reviews__item">
           <h3 class="reviews__name"><?php echo $review['name'] ?></h3>
           <p class="reviews__text"><?php echo $review['text'] ?></p>
+          <?php if ($_SESSION['admin'] == 1): ?>
           <a class="reviews__link" href="/delete-review/<?php echo $review['id'] ?>">
             <img class="reviews__icon" src="/web/icons/close.png" alt="">
           </a>
+          <?php endif; ?>
         </li>
       <?php endforeach; ?>
     </ul>

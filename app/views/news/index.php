@@ -6,7 +6,9 @@ $latestNews = News::getLatestNews();
     <div class="news">
       <div class="container">
         <ul class="news__list">
+          <?php if($_SESSION['admin'] == 1): ?>
           <a class="news__link-add" href="/add-news">Добавить новость</a>
+          <?php endif; ?>
           <?php foreach ($latestNews as $news): ?>
             <li class="news__item">
               <a class="news__link" href="/news/<?php echo $news['id'] ?>">
@@ -16,9 +18,11 @@ $latestNews = News::getLatestNews();
                   <span class="news__date"><?php echo $news['date'] ?></span>
                 </div>
               </a>
+              <?php if ($_SESSION['admin']): ?>
               <a class="news__link-delete" href="/delete-news/<?php echo $news['id'] ?>">
                 <img class="news__icon" src="/web/icons/close.png" alt="">
               </a>
+              <?php endif; ?>
             </li>
           <?php endforeach; ?>
         </ul>
