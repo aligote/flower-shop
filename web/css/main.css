@@ -337,7 +337,7 @@ body {
 }
 
 .product-table__cell-header {
-  padding: 10px 40px;
+  padding: 10px 20px;
   background: #61AC43;
   font-size: 0.9em;
   color: white;
@@ -531,13 +531,12 @@ body {
 .edit-product-form {
   display: block;
   margin: 0 auto;
-  padding: 15px;
-  width: 400px;
+  padding: 15px 45px;
   border-radius: 10px;
   text-align: center;
   background: dimgray;
   position: fixed;
-  top: 20%;
+  top: 10%;
   left: 35%;
   z-index: 100;
 
@@ -558,10 +557,11 @@ body {
 
 .edit-product-form__title,
 .edit-product-form__code,
+.edit-product-from__composition,
 .edit-product-form__price {
   border-radius: 5px;
   border: none;
-  padding: 10px 90px 10px 15px;
+  padding: 10px;
   margin-bottom: 10px;
   outline: none;
 }
@@ -601,8 +601,8 @@ body {
 }
 
 .edit-product__image-view {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   margin-bottom: 10px;
 }
 

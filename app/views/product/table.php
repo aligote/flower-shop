@@ -11,6 +11,7 @@ $latestProducts = Product::getProducts();
           <th class="product-table__cell-header">Картинка</th>
           <th class="product-table__cell-header">Название</th>
           <th class="product-table__cell-header">Артикул</th>
+          <th class="product-table__cell-header">Состав</th>
           <th class="product-table__cell-header">Цена</th>
           <th class="product-table__cell-header">Выберите действие</th>
         </tr>
@@ -22,6 +23,7 @@ $latestProducts = Product::getProducts();
             </td>
             <td class="product-table__cell"><?=$product['title']?></td>
             <td class="product-table__cell"><?=$product['code']?></td>
+            <td class="product-table__cell"><?=$product['composition']?></td>
             <td class="product-table__cell"><?=$product['price']?></td>
             <td class="product-table__cell">
               <a href="/edit-product/<?php echo $product['id'] ?>" class="product-table__button product-table__button_yellow" onclick="showForm('edit-product-form'); return false;">Редактировать</a>
