@@ -5,8 +5,8 @@
       <a class="authorization-form__link" href="#" onclick="closeForm('authorization-form'); return false;">
         <img class="authorization-form__icon" src="/web/icons/close.png" alt="">
       </a>
-      <input class="authorization-form__email" type="text" name="email" placeholder="Введите ваш E-mail">
-      <input class="authorization-form__password" type="text" name="password" placeholder="Введите ваш пароль">
+      <input class="authorization-form__email" type="email" name="email" placeholder="Введите ваш E-mail">
+      <input class="authorization-form__password" type="password" name="password" placeholder="Введите ваш пароль">
       <button class="authorization-form__button" type="submit" name="submit">Войти</button>
     </form>
   </div>
