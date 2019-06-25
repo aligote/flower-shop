@@ -402,13 +402,12 @@ body {
 }
 
 .product-view-left__image {
-  width: 550px;
-  height: 550px;
+  width: 500px;
+  height: 500px;
 }
 
 .product-view-right {
-  margin-right: 200px;
-  width: 200px;
+  width: 480px;
   height: 200px;
 }
 
