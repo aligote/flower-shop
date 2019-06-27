@@ -18,7 +18,7 @@ $latestNews = News::getLatestNews();
                   <span class="news__date"><?php echo $news['date'] ?></span>
                 </div>
               </a>
-              <?php if ($_SESSION['admin']): ?>
+              <?php if ($_SESSION['admin'] == 1): ?>
               <a class="news__link-delete" href="/delete-news/<?php echo $news['id'] ?>">
                 <img class="news__icon" src="/web/icons/close.png" alt="">
               </a>
