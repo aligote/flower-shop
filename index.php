@@ -13,6 +13,7 @@ require "app/models/News.php";
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
   session_start();
+
   //Site
   $r->addRoute('GET', '/', ["app\controllers\SiteController", "index"]);
   $r->addRoute('GET', '/contacts', ["app\controllers\SiteController", "contacts"]);
