@@ -239,7 +239,7 @@ body {
   display: flex;
   justify-content: center;
   background: #61AC43;
-  border-radius: 30px;
+  border-radius: 30px;z
 }
 
 .catalog-nav__item {
