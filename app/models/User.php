@@ -31,6 +31,7 @@ class User {
   public static function output() {
     setcookie('email', "", time() - 3600 * 24 * 30, "/");
     unset($_COOKIE['email']);
+    session_destroy();
     header('Location: /');
   }
 
