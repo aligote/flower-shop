@@ -1,6 +1,5 @@
 <?php
-class Review
-{
+class Review {
 
   const SHOW_BY_DEFAULT = 12;
 

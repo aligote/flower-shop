@@ -1,6 +1,5 @@
 <?php
-class News
-{
+class News {
 
   const SHOW_BY_DEFAULT = 12;
 

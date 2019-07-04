@@ -1,6 +1,5 @@
 <?php
-class Product
-{
+class Product {
   const SHOW_BY_DEFAULT = 12;
 
   public static function getLatestProducts($count = self::SHOW_BY_DEFAULT) {
